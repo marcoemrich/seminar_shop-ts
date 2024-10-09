@@ -2,14 +2,6 @@ import { describe, expect, it, vi } from "vitest";
 import { Seminar } from "./Seminar";
 import { ThreeLetterDiscount } from "./ThreeLetterDiscount";
 
-const createSeminarFixture = ({
-  title = "Introduction to Test-Driven Development",
-  netPrice = 100,
-  taxFree = false,
-} = {}) => {
-  return new Seminar(title, netPrice, taxFree);
-};
-
 describe("Seminar", () => {
   it("should calculate correct grossPrices", () => {
     const seminar = new Seminar("OOP", 700, false);
